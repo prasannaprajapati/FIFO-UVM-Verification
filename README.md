@@ -20,7 +20,7 @@ A FIFO is a memory-based circuit with the following characteristics:
 This design is essential for managing data flow between different system modules, ensuring efficient and ordered data transfer.
 
 ## TB Architecture 
-![FIFO TB Architecture](TB.png)
+![FIFO TB Architecture](TB1.png)
 ---
 
 ## Features Verified
