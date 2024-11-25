@@ -20,7 +20,7 @@ A FIFO is a memory-based circuit with the following characteristics:
 This design is essential for managing data flow between different system modules, ensuring efficient and ordered data transfer.
 
 ## TB Architecture 
-
+![FIFO TB Architecture](TB.png)
 ---
 
 ## Features Verified
@@ -64,12 +64,14 @@ This design is essential for managing data flow between different system modules
 - **Coverage Collector:** Monitors functional and code coverage metrics.  
 
 ### Test Cases:
-- Basic functionality checks
-- Overflow and underflow conditions
-- Reset verification
-- Pointer wraparound testing
-- Continuous operation (stress test)
-
+* 1.Basic Tests
+* 2.Reset test
+* 3.Single write/read
+* 4.Corner Cases
+* Full FIFO write attempt
+* Empty FIFO read attempt
+* Pointer wraparound
+* Back-to-back operations
 ---
 
 ## Getting Started
@@ -79,16 +81,15 @@ This design is essential for managing data flow between different system modules
 - **Simulation Tools:** Mentor QuestaSim, Synopsys VCS, or any UVM-compatible simulator.  
 
 ### Running the Tests:
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/<your_username>/fifo_uvm_verification.git
-   ```
-2. Set up your UVM environment.
-3. Compile the testbench and RTL files.
-4. Run the simulation:
-   ```bash
-   make run
-   ```
+
+```
+# Go to the make file for more information
+cd sim
+make clean
+make regress # run all the test
+```
+## Directory Structure
+![FIFO TB Architecture](TB.png)
 
 ---
 
@@ -96,9 +97,6 @@ This design is essential for managing data flow between different system modules
 Contributions and feedback are welcome! Feel free to submit issues or pull requests.
 
 ---
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for more information.
 
 ---
 
