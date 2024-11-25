@@ -105,11 +105,7 @@ This project implements a synchronous FIFO (First-In-First-Out) memory module wi
 * 1. Basic Tests
 * 2. Reset test
 * 3. Single write/read
-* 4. Corner Cases
-* Full FIFO write attempt
-* Empty FIFO read attempt
-* Pointer wraparound
-* Back-to-back operations
+* 4. Corner Cases: Full FIFO write attempt, Empty FIFO read attempt, Pointer wraparound, and Back-to-back operations
 ---
 
 ## Getting Started
