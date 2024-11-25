@@ -102,10 +102,10 @@ This project implements a synchronous FIFO (First-In-First-Out) memory module wi
 - **Coverage Collector:** Monitors functional and code coverage metrics.  
 
 ### Test Cases:
-* 1.Basic Tests
-* 2.Reset test
-* 3.Single write/read
-* 4.Corner Cases
+* 1. Basic Tests
+* 2. Reset test
+* 3. Single write/read
+* 4. Corner Cases
 * Full FIFO write attempt
 * Empty FIFO read attempt
 * Pointer wraparound
