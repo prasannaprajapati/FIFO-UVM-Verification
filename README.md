@@ -133,6 +133,9 @@ FIFO_UVM/
 * Single clock domain only
 * Fixed FIFO depth
 ---
+## Contributors
+- [TheRA1A](https://github.com/TheRA1A)
+- [Kassa Keerthi](https://github.com/kassakeerthi)
 
 ### Contact
 For questions or support, please reach out to [your_email@example.com].
