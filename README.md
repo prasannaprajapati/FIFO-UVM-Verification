@@ -89,8 +89,47 @@ make clean
 make regress # run all the test
 ```
 ## Directory Structure
-![FIFO TB Architecture](TB.png)
+```
+FIFO_UVM/
+├── dst_agt_top/
+│   ├── dst_agt.sv
+│   ├── dst_driver.sv
+│   ├── dst_monitor.sv
+│   ├── dst_agt_top.sv
+│   ├── dst_config.sv
+│   ├── dst_xtn.sv
+│   ├── dst_seqs.sv
+│   └── dst_seqr.sv
+├── src_agt_top/
+│   ├── src_agt.sv
+│   ├── src_driver.sv
+│   ├── src_monitor.sv
+│   ├── src_agt_top.sv
+│   ├── src_config.sv
+│   ├── src_xtn.sv
+│   ├── src_seqs.sv
+│   └── src_seqr.sv
 
+├── tb/
+│   ├── env.sv
+│   ├── env_congig.sv
+│   ├── virtual_seqr.sv
+│   ├── virtual_seqs.sv
+│   ├──top.sv
+│   ├──scoreboard.sv
+│   ├──tb_defs.sv
+│   
+├── test/
+│   ├── base_test.sv
+│   └── router_pkg.sv
+├── rtl/
+│   └── fifo.sv
+├── sim/
+│   ├── Makefile
+│   └── run.do
+└── README.md
+
+```
 ---
 
 ## Contributing
