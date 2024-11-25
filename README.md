@@ -1,5 +1,5 @@
 
-# FIFO UVM Verification Project
+# FIFO UVM Verification
 
 This repository contains a Universal Verification Methodology (UVM) environment for verifying a synchronous FIFO (First-In, First-Out) design. The FIFO circuit stores data in the order it is received and outputs it in the same order, ensuring smooth data flow between different parts of a system. This verification environment thoroughly tests all core functionalities of the FIFO, including read/write operations, full and empty conditions, and reset behavior.
 
