@@ -7,17 +7,55 @@ This repository contains a Universal Verification Methodology (UVM) environment 
 
 ## Project Overview
 
-### FIFO Design Description
-A FIFO is a memory-based circuit with the following characteristics:
-- **Data Flow:** Data is stored and retrieved in a first-in, first-out order.
-- **Synchronization:** Operations are synchronized using a clock signal.
-- **Control Signals:**  
-  - **Write Pointer:** Manages data entry.  
-  - **Read Pointer:** Manages data retrieval.  
-  - **Full/Empty Flags:** Indicate FIFO status.  
-  - **Reset Signal:** Clears the memory and resets pointers.
+# FIFO Memory Project
 
-This design is essential for managing data flow between different system modules, ensuring efficient and ordered data transfer.
+This project implements a synchronous FIFO (First-In-First-Out) memory module with 8 entries, each 8 bits wide. It provides functionality for data writing, reading, and monitoring the full and empty conditions.
+
+## Features
+
+- **Data In/Out**: The FIFO stores data in the order it is written and outputs it in the same order when read.
+- **Full/Empty Flags**: Flags to monitor when the FIFO is full or empty.
+- **Write/Read Control**: Control signals to manage data writing and reading.
+  
+## Inputs and Outputs
+
+### **Inputs:**
+- **`data_in`**: The data input to the FIFO.
+- **`clock`**: The clock signal that triggers FIFO operations.
+- **`reset`**: Resets the FIFO and clears its memory.
+- **`wn`**: Write enable signal. Data is written to the FIFO when `wn` is high.
+- **`rn`**: Read enable signal. Data is read from the FIFO when `rn` is high.
+
+### **Outputs:**
+- **`data_out`**: The data output from the FIFO.
+- **`full`**: The flag indicating that the FIFO is full.
+- **`empty`**: The flag indicating that the FIFO is empty.
+
+## Internal Signals
+
+- **`wptr`**: Write pointer to track the position of the next data write.
+- **`rptr`**: Read pointer to track the position of the next data read.
+- **`memory`**: The FIFO memory, consisting of 8 entries, each 8 bits wide.
+
+## Behavior
+
+### **Write:**
+- Data is written to the FIFO when `wn` is high and `full` is low.
+
+### **Read:**
+- Data is read from the FIFO when `rn` is high and `empty` is low.
+
+### **Full Condition:**
+- The FIFO is full when `wptr[2:1] == rptr[2:1]` and `wptr[0] != rptr[0]`.
+
+### **Empty Condition:**
+- The FIFO is empty when `wptr == rptr`.
+
+## Clocking
+- The FIFO operates synchronously, triggered on the positive edge of the `clock` signal.
+
+## Memory
+- The FIFO has 8 entries, each 8 bits wide.
 
 ## TB Architecture 
 ![FIFO TB Architecture](TB.png)
