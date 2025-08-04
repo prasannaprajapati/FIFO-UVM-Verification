@@ -172,4 +172,4 @@ FIFO_UVM/
 - [Kassa Keerthi](https://github.com/kassakeerthi)
 
 ### Contact
-For questions or support, please reach out to [prasanna.prajapati@example.com].
+For questions or support, please reach out to [prasanna.prajapati@gmail.com].
